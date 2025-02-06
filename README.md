@@ -1,2 +1,2 @@
 # Py_Hacking_Tools
-A collection of ethical hacking tools built with Python. This repository includes scripts for penetration testing, network scanning, password cracking, and more, designed for educational and ethical use only.
+### In this repo, you can find some ethical hacking tools built with Python. It's a learning-by-doing approach, combining Python programming and ethical hacking techniques in one project.
