@@ -11,10 +11,17 @@ import	argparse	# a library that take an argument in the command line interface.
 import  re          # a library for regular expression operations (matching some thing).
 import  sys         # ???
 
+# to-do-fun -> fun to check if the mac addr is really changed or not !!!
+# to-do-fun -> fun to gernerate a new random mac address every time !!!
+
 def	parse_args():
     parser = argparse.ArgumentParser(description="Change the MAC Address of a network interface.")
     parser.add_argument("-i", "--interface", required=True, help="Interface to Change its MAC Address (e.g eth0).")
     parser.add_argument("-m", "--new_mac", required=True, help="MAC Address to assign it to the Interface. (e.g 1a:2b:3c:4d:5e:6f)")
+    # if not (parser.interface):
+    #     print("[-] No interface provided, use --help")
+    # if not (parser.new_mac):
+    #     print("[-] No MAC Address provided")
     return parser.parse_args()
 
 def is_valid_addr(mac):
@@ -31,7 +38,7 @@ def upgrade_mac(interface, new_mac):
         subprocess.run(["ip", "link", "set", interface, "down"])
         subprocess.run(["ip", "link", "set", interface, "address", new_mac])
         subprocess.run(["ip", "link", "set", interface, "up"])
-        print("[+] Updating the MAC Address was successfully done.") # msg end
+        print("[+] Updating the MAC Address was successfully done.") # msg end 
     #  except subprocess.CalledProcessError as e: why and what is it ???
     except:
         print("[-] Error happening, MAC Address NOT upgraded")
@@ -48,10 +55,6 @@ def main():
     is_valid_addr(options.new_mac)
     upgrade_mac(options.interface, options.new_mac)
 
-    # if not (parser.interface):
-    #     print("[-] No interface provided, use --help")
-    # if not (parser.new_mac):
-    #     print("[-] No MAC Address provided")
 
 if __name__ == "__main__": # what and why ???
     main()
