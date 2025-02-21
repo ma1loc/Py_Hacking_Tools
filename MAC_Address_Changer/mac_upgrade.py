@@ -1,19 +1,21 @@
-# ╔════════════════════════════════════════════════════════════════════════════╗
-# ║                                                                            ║
-# ║             ███╗   ███╗ █████╗  ██╗██╗      ██████╗  ██████╗               ║
-# ║             ████╗ ████║██╔══██╗███║██║     ██╔═══██╗██╔════╝               ║
-# ║             ██╔████╔██║███████║╚██║██║     ██║   ██║██║                    ║
-# ║             ██║╚██╔╝██║██╔══██║ ██║██║     ██║   ██║██║                    ║
-# ║             ██║ ╚═╝ ██║██║  ██║ ██║███████╗╚██████╔╝╚██████╗               ║
-# ║             ╚═╝     ╚═╝╚═╝  ╚═╝ ╚═╝╚══════╝ ╚═════╝  ╚═════╝               ║
-# ║                                                                            ║
-# ║    Project: Mac_Changer                                                    ║
-# ║    Created:                                                                ║
-# ║    Author: ma1loc (youness anflous)                                        ║
-# ║                                                                            ║
-# ╚════════════════════════════════════════════════════════════════════════════╝
+# ╔══════════════════════════════════════════════════════════════════════════╗
+# ║                                                                          ║
+# ║             ███╗   ███╗ █████╗  ██╗██╗      ██████╗  ██████╗             ║
+# ║             ████╗ ████║██╔══██╗███║██║     ██╔═══██╗██╔════╝             ║
+# ║             ██╔████╔██║███████║╚██║██║     ██║   ██║██║                  ║
+# ║             ██║╚██╔╝██║██╔══██║ ██║██║     ██║   ██║██║                  ║
+# ║             ██║ ╚═╝ ██║██║  ██║ ██║███████╗╚██████╔╝╚██████╗             ║
+# ║             ╚═╝     ╚═╝╚═╝  ╚═╝ ╚═╝╚══════╝ ╚═════╝  ╚═════╝             ║
+# ║                                                                          ║
+# ║    Project: Mac_Changer                                                  ║
+# ║    Created:                                                              ║
+# ║    Author: ma1loc (youness anflous)                                      ║
+# ║                                                                          ║
+# ╚══════════════════════════════════════════════════════════════════════════╝
 
 #!/usr/bin/env python
+
+# >>>>> days 7/30 <<<<<<
 
 # TO_DO
 # to-do-fun -> fun to gernerate a new random mac address every time !!!
@@ -34,10 +36,6 @@ def	parse_args():
     parser = argparse.ArgumentParser(description="Change the MAC Address of a network interface.")
     parser.add_argument("-i", "--interface", required=True, help="Interface to Change its MAC Address (e.g eth0).")
     parser.add_argument("-m", "--new_mac", required=True, help="MAC Address to assign it to the Interface. (e.g 1a:2b:3c:4d:5e:6f)")
-    # if not (parser.interface):
-    #     print("[-] No interface provided, use --help")
-    # if not (parser.new_mac):
-    #     print("[-] No MAC Address provided")
     return parser.parse_args()
 
 def is_valid_addr(mac):
