@@ -8,24 +8,18 @@
 # ║             ╚═╝     ╚═╝╚═╝  ╚═╝ ╚═╝╚══════╝ ╚═════╝  ╚═════╝             ║
 # ║                                                                          ║
 # ║    Project: Mac_Changer                                                  ║
-# ║    Created:                                                              ║
+# ║    Created: 2025-02-23                                                   ║
 # ║    Author: ma1loc (youness anflous)                                      ║
 # ║                                                                          ║
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
 #!/usr/bin/env python
 
-# >>>>> days 7/30 <<<<<<
+# >>>>> days 8/30 <<<<<<
 
 # TO_DO
 # to-do-fun -> fun to gernerate a new random mac address every time !!!
 # to-do-fun -> fun to check if the mac addr is really changed with new one !!!
-
-# >>> help usage <<<
-# python3 Mac_changer.py --help -> help you to the usage of the tool
-# -i or --interface -> interface of the NIC to chage its MAC Address
-# -m or --new_mac -> New MAC of your choise to assign it to the interface
-# example of the usage -> python3 script.py -i eth0 -m 00:11:22:33:44:55 
 
 import subprocess
 import argparse
@@ -47,15 +41,15 @@ def is_valid_addr(mac):
 def upgrade_mac(interface, new_mac):
     try:
         print(f"[+] Updating the MAC address of {interface} to {new_mac}.")
-        subprocess.run(["ip", "link", "set", interface, "down"])                # why at the end check=Ture
-        subprocess.run(["ip", "link", "set", interface, "address", new_mac])    # why at the end check=Ture
-        subprocess.run(["ip", "link", "set", interface, "up"])                  # why at the end check=Ture
+        subprocess.run(["ip", "link", "set", interface, "down"], check=True)
+        subprocess.run(["ip", "link", "set", interface, "address", new_mac], check=True)
+        subprocess.run(["ip", "link", "set", interface, "up"], check=True)
         print("[+] MAC address successfully updated.")
-    except subprocess.CalledProcessError as e:
-        print(f"[-] Error: {e}")
+    except subprocess.CalledProcessError as error:
+        print(f"[-] Error: {error}")
         print("[-] MAC address NOT updated.")
-    except Exception as e:
-        print(f"[-] Unexpected error: {e}")
+    except Exception as error:
+        print(f"[-] Unexpected error: {error}")
 
 def is_root():
     if subprocess.run(["id", "-u"], capture_output=True, text=True).stdout.strip() != "0":
