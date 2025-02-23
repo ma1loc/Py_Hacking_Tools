@@ -5,3 +5,9 @@ but it can not be change, is it realy?
 yes ,but naaah why?
 the MAC is a physical address that mean's can not be chagne be you can chage it as a softwear
 you can see it is chage but in the hardwear part is not chage 
+
+>>> help usage <<<
+python3 Mac_changer.py --help -> help you to the usage of the tool
+-i or --interface -> interface of the NIC to chage its MAC Address
+-m or --new_mac -> New MAC of your choise to assign it to the interface
+example of the usage -> python3 script.py -i eth0 -m 00:11:22:33:44:55 
