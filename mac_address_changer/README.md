@@ -4,8 +4,7 @@ A Network Interface Card (NIC) is a hardware component installed in a computer, 
 but it can not be change, is it realy? 
 yes ,but naaah why?
 the MAC is a physical address that mean's can not be chagne be you can chage it as a softwear
-you can see it is chage but in the hardwear part is not chage 
-
+you can see it is chage but in the hardwear part is not chage
 help usage
 python3 Mac_changer.py --help -> help you to the usage of the tool
 -i or --interface -> interface of the NIC to chage its MAC Address
