@@ -1,9 +1,7 @@
 ## MAC Address
 ### What's the MAC Address?
-MAC (Media Access Control) Address is unique physical address assainde to every NIC(network interface controller) wired, wireless and USB NIC (there's no same address in the world).
-looks like this 1A:2B:3C:4D:5E:6F is in hexadicimal (1 to 9 and A to F) 
-is a physical address of the computer that can not be change, but i made a tool that change it
-but i sad it can not be chagne, is it realy? 
-naaah why?
+A Network Interface Card (NIC) is a hardware component installed in a computer, or other device, that enables connection to a network. It provides the physical interface between the device and the network media, handling the sending and receiving of data over the network. Each NIC has a unique Media Access Control (MAC) address, which is essential for devices to identify each other, and facilitate communication at the data link layer. NICs can be designed for wired connections, such as Ethernet cards that connect via cables, or for wireless connections, like Wi-Fi adapters utilizing radio waves. For example, a desktop computer might use a wired NIC, along with an Ethernet cable, to connect to a local network, while a laptop uses a wireless NIC to connect via Wi-Fi.
+but it can not be change, is it realy? 
+yes ,but naaah why?
 the MAC is a physical address that mean's can not be chagne be you can chage it as a softwear
 you can see it is chage but in the hardwear part is not chage 
